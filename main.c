@@ -14,7 +14,7 @@ int main() {
 	switch(answer) {
 
           case 1:
-	
+	uninstallOneDrive();
 	  break;
 
 	}
