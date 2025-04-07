@@ -9,21 +9,12 @@ int main() {
     printf("> ");
     scanf("%d", &answer);
     
-	printf("Selected: %d\n", answer);
-    
 	switch(answer) {
-
-          case 1:
-	uninstallOneDrive();
-	  break;
-	  
-	  case 2:
-	optmizeMemoryRam();
-	  break;
-
-
+          case 1: uninstallOneDrive(); break;
+	  case 2: optmizeMemoryRam(); break;
+	  case 0: printf('exited'); break;
 	}
 
-    return 0;
+	return 0;
 }
 
