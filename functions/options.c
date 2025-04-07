@@ -10,7 +10,7 @@ void uninstallOneDrive() {
     if (result == 0) {
         printf("OneDrive desinstalado com sucesso.\n");
     } else {
-        printf("Falha ao tentar desinstalar o OneDrive. Código: %d\n", result);
+ 	printf("Falha ao tentar desinstalar o OneDrive. Código: %d\n", result);
     }
 }
 
@@ -25,11 +25,11 @@ int optmizeMemoryRam() {
     }
 
     cProcesses = cbNeeded / sizeof(DWORD);
-
+   
     for (unsigned int i = 0; i < cProcesses; i++) {
         if (processes[i] == 0)
             continue;
-
+             
         HANDLE hProcess = OpenProcess(PROCESS_SET_QUOTA | PROCESS_QUERY_INFORMATION, FALSE, processes[i]);
         if (hProcess) {
             if (SetProcessWorkingSetSize(hProcess, -1, -1)) {
