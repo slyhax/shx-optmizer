@@ -2,10 +2,23 @@
 #include "functions/menu.h"
 #include "functions/options.h"
 
+int main() {
+    int answer;
 
-int main () {
+    exibirMenu();
+    printf("> ");
+    scanf("%d", &answer);
+    
+    printf("Selected: %d\n", answer);
+    
+	switch(answer) {
 
-	exibirMenu();
-	return 0;
+          case 1:
+	
+	  break;
 
+	}
+
+    return 0;
 }
+

@@ -2,7 +2,7 @@
 #define OPTIONS_H
 
 void uninstallOneDrive();
-void optmizeMemoryRam();
+int optmizeMemoryRam();
 
 
 #endif

@@ -1,20 +1,20 @@
 #include "options.h"
 #include <stdio.h>
+#include <windows.h>
+#include <psapi.h>
+#include <stdlib.h>
 
 void uninstallOneDrive() {
-	   int result = system("taskkill /f /im OneDrive.exe && %SystemRoot%\\System32\\OneDriveSetup.exe /uninstall");
+    int result = system("taskkill /f /im OneDrive.exe && %SystemRoot%\\System32\\OneDriveSetup.exe /uninstall");
 
     if (result == 0) {
         printf("OneDrive desinstalado com sucesso.\n");
     } else {
         printf("Falha ao tentar desinstalar o OneDrive. Código: %d\n", result);
     }
-    return 0;
 }
 
-
-void optmizeMemoryRam() {
-
+int optmizeMemoryRam() {
     SetProcessWorkingSetSize(GetCurrentProcess(), -1, -1);
     printf("[+] Memória do processo atual otimizada.\n");
 
@@ -41,5 +41,5 @@ void optmizeMemoryRam() {
 
     printf("[✔] Otimização de RAM finalizada.\n");
     return 0;
-
 }
+
