@@ -9,13 +9,18 @@ int main() {
     printf("> ");
     scanf("%d", &answer);
     
-    printf("Selected: %d\n", answer);
+	printf("Selected: %d\n", answer);
     
 	switch(answer) {
 
           case 1:
 	uninstallOneDrive();
 	  break;
+	  
+	  case 2:
+	optmizeMemoryRam();
+	  break;
+
 
 	}
 
