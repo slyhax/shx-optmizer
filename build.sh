@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc main.c functions/menu.c functions/options.c -o output/shx -lPsapi
+gcc src/main.c src/functions/menu.c src/functions/options.c -o output/shx -lPsapi
 
